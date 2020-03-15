@@ -1,0 +1,430 @@
+/* Color */
+.blackBg {
+  border-radius: 6px;
+  background-color: #1E3799;
+}
+
+/* text */
+p,
+a,
+h1,
+h2,
+h3 {
+  color: #333333;
+  font-family: 'PT Sans', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #333333;
+  line-height: inherit;
+}
+
+h2 {
+  line-height: 1.4;
+}
+
+@media only screen and (max-width: 768px) {
+  p {
+    font-size: 3vw;
+  }
+  h2 {
+    font-size: 4vw;
+  }
+}
+@media only screen and (max-width: 500px) {
+  p {
+    font-size: 4vw;
+  }
+  h2 {
+    font-size: 5vw;
+  }
+}
+
+/* layout */
+.fa {
+  padding-right: 10px;
+  padding-left: 10px;
+  color: #333333;
+}
+
+.center {
+  text-align: center;
+}
+
+.section {
+  transition: 0.5s ease;
+}
+
+.sectionMargin {
+  width: 80%;
+  max-width: 1400px;
+  margin: auto;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.underline {
+  cursor: pointer;
+  color: #FFFFFF;
+  border-bottom: 3px solid #FFFFFF;
+}
+
+.underlineDark {
+  cursor: pointer;
+  color: #333333;
+  border-bottom: 3px solid #333333;
+}
+
+.static {
+  pointer-events: none;
+}
+
+::selection {
+  background: #EA4C89; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: #EA4C89; /* Gecko Browsers */
+}
+
+@media only screen and (max-width: 1000px) {
+  .sectionMargin {
+    width: 90%;
+    margin: auto;
+  }
+
+  .flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+/*Nav*/
+
+#menu {
+  position: fixed;
+  z-index: 4;
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin-bottom: 0;
+  padding-right: 10px;
+  padding-left: 10px;
+  color: #FFFFFF;
+  background-color: #1E3799;
+  background-color: margin-top: 0;
+}
+
+.name {
+  color: #FFFFFF;
+  font-family: 'DM Serif Text', serif;
+  font-size: 24px;
+}
+
+.position {
+  color: #BFBFBF;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 18px;
+}
+
+#menu li {
+  display: inline;
+}
+
+#menu li a {
+  margin-left: 30px;
+  color: #BFBFBF;
+  font-family: 'DM Serif Text', serif;
+  font-size: 18px;
+}
+
+#menu li:hover a {
+  color: var(--oil);
+}
+
+#menu li.active a {
+  color: var(--oil);
+}
+
+.navDisplay {
+  position: absolute;
+}
+
+#menu li a {
+  width: 0;
+  height: 25px;
+  transition: 0.5s ease;
+  white-space: nowrap;
+  text-decoration: none;
+  border-bottom: 3px solid transparent;
+}
+
+#menu li.active a {
+  width: 100%;
+  border-bottom: 3px solid #FFFFFF;
+}
+
+#menu li a:hover {
+  width: 100%;
+  border-bottom: 3px solid #FFFFFF;
+}
+
+/* desktop */
+@media only screen and (min-width: 1000px) {
+  .fp-viewing-home #menu li a {
+    color: #FFFFFF;
+  }
+
+  .fp-viewing-home #menu li a:hover {
+    border-bottom: 3px solid #FFFFFF;
+  }
+
+  #menu {
+    align-items: center;
+    padding: 12px 10%;
+  }
+}
+
+/*mobile*/
+@media only screen and (max-width: 1000px) {
+  #menu ul {
+    display: none;
+  }
+
+  .mobileHide {
+    display: none;
+  }
+
+  .camImage {
+    max-width: 300px;
+  }
+
+  .aboutRight {
+    padding-bottom: 15px;
+  }
+
+  .aboutLeft {
+    text-align: center;
+  }
+
+  #menu {
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}
+
+@media only screen and (max-width: 345px) {
+  #menu li a {
+    font-size: 4.5vw;
+  }
+}
+
+/* home */
+.homeText h2 {
+  color: #FFFFFF;
+}
+
+/* about */
+.aboutLeft {
+  width: 100%;
+  max-width: 25%;
+}
+.aboutRight {
+  width: 100%;
+  max-width: 65%;
+}
+
+.aboutDescription {
+  padding: 10px 0;
+}
+
+.aboutCam {
+  font-family: 'DM Serif Text', serif;
+  font-size: 32px;
+}
+
+.aboutLink {
+  padding-bottom: 0;
+  color: #1E3799;
+  border-bottom: 3px solid #1E3799;
+  font-family: 'DM Serif Text', serif;
+}
+
+.camImage {
+  width: 100%;
+  height: auto;
+}
+
+.aboutText {
+  font-family: 'PT Sans', sans-serif;
+  font-size: 20px;
+}
+
+.aboutTextInteractive {
+  padding: 0 4px;
+  cursor: pointer;
+  transition: 0.5s ease;
+  color: #FFFFFF;
+}
+
+#aboutChicagoGIF,
+#aboutSportsGIF,
+#aboutExoticGIF,
+#aboutFrontGIF,
+#aboutRockGIF,
+#aboutSkiGIF,
+#aboutVideoGamesGIF,
+#aboutPodcastGIF {
+  display: none;
+}
+
+#aboutTrigger {
+  width: fit-content;
+}
+
+#aboutTextPlay,
+#aboutTriggerPlay {
+  display: none;
+}
+
+@media only screen and (max-width: 1000px) {
+  .aboutLeft {
+    max-width: 95%;
+  }
+
+  .aboutTextInteractive {
+    pointer-events: none;
+  }
+}
+
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* work */
+.carousel {
+  width: 100%;
+  color: #FFFFFF;
+}
+
+.carouselSlide {
+  display: flex !important;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  margin-right: 25px;
+  margin-left: 25px;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 20px;
+}
+
+.workDescription {
+  max-width: 600px;
+}
+
+.workTitle {
+  padding-bottom: 10px;
+  font-family: 'DM Serif Text', serif;
+  font-size: 32px;
+}
+
+.workBody {
+  font-family: 'PT Sans', sans-serif;
+  font-size: 20px;
+}
+
+.workBox {
+  position: relative;
+  display: flex;
+  width: 25%;
+  max-width: 275px;
+  height: 275px;
+  margin: 0 5px;
+  border-radius: 10px;
+}
+
+.workContent {
+  margin: auto;
+  text-align: center;
+}
+
+.workDesktop {
+  display: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.workMobile {
+  display: none;
+}
+
+.workImg {
+  width: 75%;
+  height: auto;
+}
+
+@media only screen and (max-width: 1000px) {
+  .workBox {
+    width: 275px;
+    max-width: auto;
+    height: 75px;
+    margin: 5px 0;
+    border-radius: 10px;
+  }
+
+  .workContent {
+    height: 75px;
+  }
+
+  .workImg {
+    width: auto;
+    height: 100%;
+  }
+
+  .workDesktop {
+    display: none;
+  }
+
+  .workMobile {
+    display: block;
+  }
+}
+
+/* contact */
+.contactTitle {
+  padding: 0 4px;
+  color: #FFFFFF;
+  font-family: 'DM Serif Text', serif;
+}
+
+/* video embed */
+.embed-container {
+  position: relative;
+  overflow: hidden;
+  max-width: 100%;
+  height: 0;
+  height: auto;
+  padding-bottom: 56.25%;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
